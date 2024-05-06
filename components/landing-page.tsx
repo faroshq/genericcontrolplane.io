@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Image from 'next/image'
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import Link from "next/link"
@@ -51,13 +52,7 @@ export function LandingPlage() {
                 </div>
               </div>
             </div>
-            <img
-              alt="Hero"
-              className="mx-auto aspect-[3/1] overflow-hidden rounded-t-xl object-cover"
-              height="300"
-              src="/placeholder.webp"
-              width="1270"
-            />
+            <LandingImage />
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
@@ -96,7 +91,7 @@ export function LandingPlage() {
                 <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Contact Us</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Have questions or need assistance? Our team is here to help. Fill out the form below, and we'll get
+                  Have questions or need assistance? Our team is here to help. Fill out the form below, and well get
                   back to you as soon as possible.
                 </p>
               </div>
@@ -124,6 +119,18 @@ export function LandingPlage() {
         </section>
       </main>
     </div>
+  )
+}
+
+export default function LandingImage() {
+  return (
+    <Image
+    className="mx-auto aspect-[3/1] overflow-hidden rounded-t-xl object-cover"
+    height={300}
+    src="/placeholder.webp"
+    width={1270}
+    alt="Generic Control Plane"
+    />
   )
 }
 
